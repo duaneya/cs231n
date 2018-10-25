@@ -1,0 +1,10 @@
+*.swp
+*.pyc
+.env/*
+
+# gitignore the built release.
+assignment3/*
+.idea
+.ipynb*
+.vscode
+
