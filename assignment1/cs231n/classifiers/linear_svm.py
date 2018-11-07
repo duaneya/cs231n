@@ -96,6 +96,7 @@ def svm_loss_vectorized(W, X, y, reg):
     #############################################################################
 
     # dW_mask[loss_mask < 0] = 0
+    margin[np.arange(X.shape[0]), y] = 0
     margin[margin > 0] = 1
     margin[np.arange(X.shape[0]), y] = -np.sum(margin, axis=1)
     dW = X.T.dot(margin) / X.shape[0]
